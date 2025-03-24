@@ -1,0 +1,24 @@
+ EventListeners in the Project
+
+This project utilizes Java Swing to create a multi-page GUI application, including a Login Page, Feedback Page, and Result Page.
+ EventListeners play a critical role in handling user interactions and ensuring proper functionality across the application.
+
+ Here is a summary of how they were implemented:
+
+1. ActionListener: Used for button clicks, such as logging in, submitting feedback, and navigating between pages. 
+For example, the "Login" button validates the password and redirects the user, while the "Submit" button in the 
+ Feedback Page validates form inputs before adding data to the JTable.
+
+2. DocumentListener: Monitors real-time changes in text fields, such as the comment Field in the Feedback Page.
+ It enables or disables the "Submit" button based on email validity and ensures the comment length is within the required range.
+
+3. ListSelectionListener: Tracks row selections in the JTable on the Feedback Page. 
+It enables the "DISPLAY RESULT" button only when a row is selected, allowing the user to navigate to the Result Page with the selected data.
+
+4. FocusListener KeyListener: These listeners provide additional validation and feedback. For instance,
+ a KeyListener enforces uppercase-only input in the password field, while a FocusListener clears fields when they gain focus.
+
+5. WindowListener: Handles window events, such as closing the application, to ensure data is saved or confirm the user’s intent.
+
+By combining these EventListeners, the application ensures a seamless user experience, with real-time validation, and clear error messaging.
+ This approach demonstrates the power of EventListeners in creating dynamic and responsive GUI applications.
